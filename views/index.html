@@ -1,0 +1,74 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>SMS Promotion Webpage</title>
+    <link rel="stylesheet" href="/bootstrap/css/">
+    <link rel="stylesheet" href="/styles/style.css">
+    <script src="/jquery/jquery.js"></script>
+    <script src="/bootstrap/js/"></script>
+    <script src="/bootstrap-validator/validator.min.js"></script>
+    <script src="/scripts/script.js"></script>
+</head>
+
+<body>
+    <div class="container-fluid flex vertical-center">
+        <div class="row">
+            <div class="col-md-4 col-md-offset-3">
+                <h2> Promo code generator</h2>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4 col-md-offset-3">
+                <div class="form-horizontal" id="promo-code-form">
+                    <div class="form-group">
+                        <div class="col-sm-12" id="country-codes-container">
+                            <div class="help-block with-errors"></div>
+                            <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
+                        </div>
+                    </div>
+                    <div class="form-group  has-feedback">
+                        <div class="col-sm-12">
+                            <input type="tel" class="form-control" id="input-tel" placeholder="Telephone" data-error="Only numbers are allowed min length 4 max 15 digits!" pattern="^[0-9]*$" data-minlength="4" maxlength="15" required data-null>
+                            <div class="help-block with-errors"></div>
+                            <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
+                        </div>
+                    </div>
+                    <div class="form-group  has-feedback">
+                        <div class="col-sm-offset-2 col-sm-10">
+                            <div class="checkbox">
+                                <label><input type="checkbox" data-error="Please confirm your age" required>I am over 18</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group  has-feedback">
+                        <div class="col-sm-offset-2 col-sm-10">
+                            <div class="checkbox">
+                                <label><input type="checkbox" data-error="Please accept the terms and conditions" required>I accept the terms and conditions</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-sm-12">
+                            <button type="submit" id="submit" class="btn btn-primary btn-lg btn-block">Submit</button>
+                        </div>
+                    </div>
+                    <div id="message-placeholder">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+</body>
+
+</html>
+<script>
+    $(function() {
+        createCountryCodes();
+        createValidations();
+        attachSubmitEvent();
+    });
+</script>
