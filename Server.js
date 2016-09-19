@@ -1,6 +1,6 @@
-const twilioId = 'AC964cf194d80886e9dcdc51f7ed95fa4b';
-const twilioToken = 'bd77b5bca83b18054860e0235b4b0bb0';
-const fromPhone = '(513) 348-1414';
+const twilioId = "REPLACE THIS";
+const twilioToken = "REPLACE THIS";
+const fromPhone = "REPLACE THIS";
 var bootstrapService = require("express-bootstrap-service");
 var express = require('express');
 var app = express();
